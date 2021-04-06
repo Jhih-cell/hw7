@@ -110,7 +110,7 @@ def api():
     val = (username, )
     mycursor.execute(sql, val)
     id = mycursor.fetchall()
-    id = str(id)[2:len(id)-4]
+    id = int(str(id)[2:len(id)-4])
     # 取出使用者姓名
     sql = "SELECT name FROM user WHERE username=%s"
     val = (username,)
