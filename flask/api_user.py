@@ -5,7 +5,7 @@ import mysql.connector
 mydb = mysql.connector.connect(
     host="127.0.0.1",
     user="root",
-    password="ella223567",
+    password="*********************",
     database="website"
 )
 
@@ -88,6 +88,8 @@ def signin():
 
 
 # 成功登入的路由
+
+
 @app.route("/member/")
 def member():
     # 檢查使用者狀態
@@ -98,7 +100,7 @@ def member():
     # 在後端Session 中記錄使用者狀態為未登入，並導向【首頁】
     return redirect("/")
 
-# 查詢會員資料 API
+# 查詢會員姓名 API
 
 
 @app.route("/api/users")
